@@ -6,24 +6,24 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {                           //statelesswidget is needed for hotreload 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {                          // hotreload finds build widget
     return MaterialApp(
-      home: Scaffold(
+      home: Scaffold(                                           //scaffold is a class with many properties like appBar etc.
         backgroundColor: Colors.lightGreen,
         appBar: AppBar(
           title: Text('i am riche '),
           backgroundColor: Colors.black,
         ),
-        body: SafeArea(
-          child: Container(
+        body: SafeArea(                                         // Safearea is the widget which keeps its child in the area which is 
+          child: Container(                                     // readable.
             child: Text('hello ji'),
-            height: 200,
+            height: 200,                                        // height and width of container.
             width: 100,
-            margin: EdgeInsets.fromLTRB(17, 78, 89, 10),
-            padding: EdgeInsets.fromLTRB(10, 10, 10, 45), //for 
-            color: Colors.amberAccent,
+            margin: EdgeInsets.fromLTRB(17, 78, 89, 10),         // sets the margins of the containers from the body area  
+            padding: EdgeInsets.fromLTRB(10, 10, 10, 45),        // for setting the margins of the child of container from the border
+            color: Colors.amberAccent,                           // walls of containers.
           ),
         ),
       ),
