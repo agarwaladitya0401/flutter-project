@@ -18,16 +18,16 @@ class MyApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Container(
+            crossAxisAlignment: CrossAxisAlignment.start,                  // in crossAxisAlignment 'start' denotes that if the ( in coulmn case ) 
+            children: <Widget>[                                            // if the children has diff. width then they will be stick with begging end.
+              Container(                                                   // if it would be ' row ' they will stick with their top .
                 height: 100,
                 width: 150,
                 child: Text(
                   'I',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headline4,             // diff. heading style.
                 ),
-                color: Colors.deepOrange,
+                color: Colors.deepOrange, 
               ),
               SizedBox(
                   child: Text(
