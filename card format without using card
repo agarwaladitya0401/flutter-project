@@ -1,0 +1,100 @@
+# flutter-project
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightGreen,
+        appBar: AppBar(
+          title: Text('i am riche '),
+          backgroundColor: Colors.black,
+        ),
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              //margin: EdgeInsets.only(top: 200, left: 100),
+              // margin: EdgeInsets.only(top: 200),
+              Center(
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundImage: AssetImage('images/baarangbali.jpg'),
+                ),
+              ),
+
+              Text(
+                'bajrang',
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),                              
+                textAlign: TextAlign.left,
+              ),
+              Text(
+                'flutter devloper',
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Modak',
+                    color: Colors.brown),
+                // textAlign: TextAlign.left,
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 135),
+                margin: EdgeInsets.symmetric(vertical: 0, horizontal: 20),                 // we have used row for it ,now in coming file we will be using card
+                child: Row(                                                                // will have pre-defined format for adding icon,text,etc..                    
+                  children: <Widget>[                                                       // BUT IT DOESN'T HAVE PADDING PROPERTY ,BUT WE CAN ADD IT B USING PADING CLASS 
+                    Icon(                                                                 // INSTEAD OF USING PADDING PROPERTY.
+                      Icons.phone,
+                      color: Colors.black,
+                    ),
+                    Text(
+                      '948848444',
+                      style: TextStyle(
+                        color: Colors.deepPurple[900],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 100),
+                margin: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.mail,
+                      color: Colors.black,
+                    ),
+                    Text(
+                      'abc@gmail.com',
+                      style: TextStyle(
+                          color: Colors.deepPurple[900],
+                          fontFamily: 'Modak',
+                          fontSize: 20,
+                          fontStyle: FontStyle.italic),
+                    )
+                  ],
+                ),
+              )
+              // margin: EdgeInsets.only(bottom: 180),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
